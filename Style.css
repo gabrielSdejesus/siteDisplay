@@ -4,9 +4,11 @@
 }
 
 header{
-    width: 960px;
-    height: 153px;
+    width: 90vw;
+    height: 90vh;
+    max-height: 153px;
     margin-top: 30px;
+    max-width: 960px;
 }
 
 /* Logo Display + Nome Display */
@@ -145,67 +147,63 @@ section{
 }
 
 section#banner {
-    width: 960px;
-    height: 800px;
-    margin-bottom: -180px;
+    max-width: 960px;
+    width: 95vw;
 }
 
-section#banner div{
+section#banner div#soImg{
     background-image: url(imagens/bg_banner.png);
-    height: 500px;
+    max-height: 500px;
+    max-width: 960px;
+    width: 95vw;
     background-size: cover;
     text-align: center;
 }
 
 section#banner img.banner{
     padding-top: 80px;
-
+    max-width: 830px;
+    width: 90vw;
 }
 
-section#banner p {
+section#banner p#lng {
+    display: flex;
     color: #AEADAD;
     font-family: 'Roboto',"Trebuchet MS", Arial, Helvetica, sans-serif;
     text-align: center;
     padding-top: 50px;
-    padding-left: 70px;
-    padding-right: 70px;
-    padding-bottom: 20px;
 }
 
 section#banner a {
-    display: block;
+    display: flex;
     background-color: #2ecc71;
     color: #ffffff;
     font-size: 20px;
     width: 185px;
-    height: 35px;
     text-decoration: none;
-    padding-top: 10px;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
     font-family: 'Roboto',"Trebuchet MS", Arial, Helvetica, sans-serif;
-    border-radius: 20px;
-    margin-top: 16px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
 section#banner a:hover {
     text-decoration: underline;
 }
 
-/* Section Conteudo */
-section#conteudo {
-    width: 940px;
-    margin-top: 85px;
+div.container{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 960px;
+    width: 95vw;
 }
 
 div.chamada {
     display: inline-block;
     width: 30%;
-    margin-left: -2px;
-    margin-right: auto;
     padding-inline: 13px;
-    margin-bottom: 16px;
 }
 
 div.chamada img {
@@ -221,7 +219,7 @@ div.chamada p.text {
     color: #8A8888;
     font-size: 24px;
     font-weight: 700;
-    font-family: 'Roboto',"Trebuchet MS", Arial, Helvetica, sans-serif;
+    margin: 7px;
 }
 
 div.chamada a{
@@ -242,7 +240,8 @@ div.chamada a:hover{
 
 /* Rodapé */
 footer{ 
-    width: 960px;
+    max-width: 960px;
+    width: 90vw;
     display: flex;
     height: 90px;
     background-color: #efefef;
@@ -253,4 +252,56 @@ footer p {
     padding-left: 25px;
     color: #575757;
     font-family: 'Roboto',"Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+@media (max-width: 1000px){
+
+    div.container{
+        max-width: 650px;
+    }
+
+    div.chamada {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    }
+}
+
+@media (max-width: 650px){
+
+    div.container{
+        max-width: 500px;
+    }
+
+    div.chamada {
+    width: 80vw;
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+    }
+}
+
+@media (max-width: 515px){
+    header {
+        display: flex;
+        width: 90vw;
+        height: 90vh;
+        max-height: 120px;
+        margin-top: 30px;
+        margin-bottom: 63px;
+        flex-direction: column;
+    }
+
+    nav#menuSocial ul.redeSocial {
+        margin-top: auto;
+        margin-bottom: auto;
+        padding: 0px;
+    }
+
+    nav ul.optionsMenu li {
+        font-size: 18px;
+        padding-top: 15px;
+        padding-right: 5px;
+    }
 }
